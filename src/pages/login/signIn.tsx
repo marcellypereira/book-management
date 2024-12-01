@@ -18,12 +18,14 @@ const SignIn = () => {
     e.preventDefault();
     login({ email, password }).then((user) => {
       if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
         setToastType("success");
         setToastMessage("Login bem-sucedido!");
         setShowToast(true);
+  
         setTimeout(() => {
-          if (user.position === "admin") {
-            navigate("/home");
+          if (user.position === "Administrador") {
+            navigate("/books");
           } else {
             navigate("/listforusers");
           }

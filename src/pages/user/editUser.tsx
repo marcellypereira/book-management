@@ -27,7 +27,7 @@ const EditUser: React.FC = () => {
         setSelectedUser(userToEdit);
       } else {
         setToast({ message: "Usuário não encontrado.", type: "error" });
-        navigate("/home");
+        navigate("/books");
       }
     }
   }, [users, id, navigate]);

@@ -33,7 +33,7 @@ const BookCard: React.FC<BookCardProps> = ({
   }, [isModalOpen]);
 
   return (
-    <div className="w-80 bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="w-80 bg-white rounded-lg shadow-2xl overflow-hidden">
       <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
       <div className="p-4 text-center">
         <h3 className="text-lg font-semibold text-black">{title}</h3>

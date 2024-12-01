@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 import Title from "../components/title";
 import BookCard from "../components/bookCard";
 import { useBooks } from "../hooks/useBooks";
+import { useSession } from "../hooks/useSession";
 
 const ListForUsers: React.FC = () => {
   const { books } = useBooks();
   const navigate = useNavigate();
+  const { logout } = useSession();
 
   if (books.isLoading) {
     return <div>Carregando...</div>;
@@ -19,9 +21,9 @@ const ListForUsers: React.FC = () => {
 
   return (
     <div className="p-8">
-      <Title text="Books Management" />
+      <Title text="Gerenciamento de livros" />
 
-      <div className="mt-auto px-6 pb-4">
+      <div className="mt-auto px-6 pb-4" onClick={logout}>
         <button
           className="absolute top-8 right-8 flex items-center p-2 text-[#6347F9] hover:text-[#5238e5]"
           onClick={() => navigate("/signin")}

@@ -43,25 +43,27 @@ const BookList: React.FC = () => {
     return <p>Erro ao carregar os livros.</p>;
   }
 
+  const sortedUsers = books.data ? [...books.data].reverse() : [];
+
   return (
     <div className="grid gap-4">
       <div className="border-t border-gray-300 mb-2 mt-5"></div>
   
-      <div className="hidden sm:grid grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 text-gray-400 text-sm">
-        <span className="font-medium text-center">Capa</span>
-        <span className="font-medium text-center">Nome</span>
+      <div className="hidden sm:grid grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 text-gray-400 text-sm px-4">
+        <span className="font-medium text-left">Capa</span>
+        <span className="font-medium text-left">Nome</span>
         <span className="font-medium text-center">Autor</span>
-        <span className="font-medium text-center">Data</span>
-        <span className="font-medium text-center">Ações</span>
+        <span className="font-medium text-left">Data</span>
+        <span className="font-medium text-end">Ações</span>
       </div>
   
       <PaginatedList
-        items={books.data || []}
+        items={sortedUsers}
         itemsPerPage={5}
         renderItem={(book) => (
           <div
             key={book.id}
-            className="grid sm:grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 items-center px-4 py-2 bg-white rounded-md shadow-md sm:text-start lg:text-center md:text-center"
+            className="grid sm:grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 items-center px-4 py-2 bg-white rounded-md shadow-md sm:text-left text-center"
           >
             <div className="w-full h-24 sm:h-28 mx-auto sm:mx-0">
               <img
@@ -75,11 +77,10 @@ const BookList: React.FC = () => {
               {book.title}
             </h2>
   
-            <p className="text-sm text-gray-500 truncate">{book.author}</p>
+            <p className="text-sm text-gray-500 truncate text-center">{book.author}</p>
   
             <p className="text-sm text-gray-500 truncate">{book.publicationDate}</p>
-  
-            <div className="flex lg:justify-center md:justify-center justify-end space-x-4">
+            <div className="flex lg:justify-end md:justify-end justify-end space-x-4">
               <button
                 className="text-[#6347F9] hover:text-[#5037d1] transition-all"
                 onClick={() => navigate(`/edit-book/${book.id}`)}

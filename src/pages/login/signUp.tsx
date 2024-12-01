@@ -21,6 +21,10 @@ const schema = yup.object().shape({
     .string()
     .oneOf([yup.ref("password")], "As senhas não coincidem")
     .required("Confirmar senha é obrigatório"),
+  terms: yup
+    .boolean()
+    .oneOf([true], "Você deve aceitar os termos e condições.")
+    .required("Aceitar os termos é obrigatório"),
 });
 
 const SignUp: React.FC = () => {
@@ -213,13 +217,18 @@ const SignUp: React.FC = () => {
                 type="checkbox"
                 id="terms-checkbox"
                 className="h-4 w-4 accent-[#6347F9]"
+                {...control.register("terms")}
               />
               <label className="text-xs">
                 Ao criar, eu concordo com os termos e condições, política de
                 privacidade e política de cookies.
               </label>
             </div>
-
+            {errors.terms && (
+              <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                {errors.terms.message}
+              </p>
+            )}
             <button
               type="submit"
               className="w-full bg-[#6347F9] text-white py-2 rounded-md mt-4 hover:bg-[#5238e5] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"

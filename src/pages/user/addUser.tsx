@@ -59,7 +59,7 @@ const AddUser: React.FC = () => {
       <Sidebar />
       <div className="flex-1 md:ml-64 flex flex-col">
         <Header />
-        <div className="flex-1 flex items-start md:items-center justify-center p-4 overflow-y-auto">
+        <div className="flex-1 flex items-start justify-center p-4 overflow-y-auto pt-12">
           <div className="p-6 sm:p-8 w-full max-w-xl md:max-w-3xl lg:max-w-5xl 
             bg-transparent shadow-none 
             md:bg-white md:shadow-md rounded-lg">

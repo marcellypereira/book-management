@@ -8,6 +8,7 @@ export type SignUpFormData = {
   email: string;
   password: string;
   confirmPassword: string;
+  terms: boolean;
 };
 export interface ToastProps {
   message: string;
@@ -26,7 +27,6 @@ export interface User {
   id?: string | number;
   name: string;
   email: string;
-  createDate: string;
   position: string;
   password: string;
   confirmPassword: string;

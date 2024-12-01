@@ -1,7 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { User } from "../types/types";
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const useUsers = () => {
   const queryClient = useQueryClient();

@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  FiHome,
-  FiPlus,
-  FiUsers,
-  FiLogOut,
-  FiX,
-  FiMenu,
-} from "react-icons/fi";
+import { FiBook, FiUsers, FiLogOut, FiX, FiMenu } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { useSession } from "../hooks/useSession";
 
 interface NavItem {
   label: string;
@@ -17,14 +11,14 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Início", icon: <FiHome />, to: "/home" },
-  { label: "Adicionar livro", icon: <FiPlus />, to: "/addbook" },
+  { label: "Livros", icon: <FiBook />, to: "/books" },
   { label: "Usuários", icon: <FiUsers />, to: "/user" },
 ];
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const { logout } = useSession();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -51,7 +45,7 @@ const Sidebar: React.FC = () => {
         >
           <div className="w-1 h-12 bg-[#6347F9]"></div>
           <h1 className="text-2xl font-bold text-black">
-            Books <br /> Management
+            Gerenciamento <br /> de livros
           </h1>
         </div>
 
@@ -74,7 +68,7 @@ const Sidebar: React.FC = () => {
           ))}
         </nav>
 
-        <div className="mt-auto px-6 pb-4">
+        <div className="mt-auto px-6 pb-4" onClick={logout}>
           <button
             className="flex items-center px-4 py-2 w-full rounded-md text-gray-800 hover:bg-[#D8DDF6]"
             onClick={() => navigate("/signin")}

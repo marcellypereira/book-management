@@ -1,18 +1,9 @@
 {
   "users": [
     {
-      "id": "8216",
-      "name": "Joao Marques",
-      "position": "user",
-      "createDate": "2025",
-      "email": "joao@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
       "id": "1540",
       "name": "Paula Lima",
-      "position": "user",
+      "position": "Usuário",
       "createDate": "2024",
       "email": "paula@gmail.com",
       "password": "Admin123#",
@@ -21,7 +12,7 @@
     {
       "id": "c823",
       "name": "Maria Prado",
-      "position": "user",
+      "position": "Usuário",
       "createDate": "2022",
       "email": "maria@gmail.com",
       "password": "Admin123#",
@@ -30,7 +21,7 @@
     {
       "id": "1b7e",
       "name": "Carlos Pereira",
-      "position": "admin",
+      "position": "Administrador",
       "createDate": "2000",
       "email": "carlos@gmail.com",
       "password": "Admin123#",
@@ -39,7 +30,7 @@
     {
       "id": "da36",
       "name": "Emanuela Chaves",
-      "position": "user",
+      "position": "Usuário",
       "createDate": "2021",
       "email": "emanuela@gmail.com",
       "password": "Admin123#",
@@ -48,7 +39,7 @@
     {
       "id": "2456",
       "name": "David Moraes",
-      "position": "admin",
+      "position": "Administrador",
       "createDate": "2023",
       "email": "david@gmail.com",
       "password": "Admin123#",
@@ -57,18 +48,9 @@
     {
       "id": "c740",
       "name": "Murilo Chavier",
-      "position": "user",
+      "position": "Usuário",
       "createDate": "2020",
       "email": "murilo@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "960b",
-      "name": "Ana Carla Brito",
-      "position": "admin",
-      "createDate": "2016",
-      "email": "ana@gmail.com",
       "password": "Admin123#",
       "confirmPassword": "Admin123#"
     },
@@ -77,8 +59,34 @@
       "name": "Julia Ramos",
       "email": "julia@gmail.com",
       "password": "Admin123#",
-      "position": "user",
-      "createDate": "2024-12-01"
+      "position": "Usuário",
+      "createDate": "2024-12-01",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "vo1t",
+      "name": "Billyfranklim Avelino Pereira",
+      "email": "billyfranklim@gmail.com",
+      "password": "12345678",
+      "position": "Administrador",
+      "createDate": "2024-12-01",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "650b",
+      "name": "Marcelly Avelino",
+      "position": "Administrador",
+      "email": "marcelly@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "82ba",
+      "name": "Giselly Pereira",
+      "position": "Usuário",
+      "email": "giselly@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
     }
   ],
   "books": [

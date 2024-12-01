@@ -2,6 +2,8 @@ import { useState } from "react";
 import * as Yup from "yup";
 import { LoginFormData, User } from "../types/types";
 
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 const useAuth = () => {
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -32,7 +34,7 @@ const useAuth = () => {
         return { position: "admin" };
       }
 
-      const users = await fetch("http://localhost:3001/users")
+      const users = await fetch(`${BASE_URL}/users`)
         .then((res) => res.json())
         .catch((err) => {
           console.error("Erro ao buscar usuários:", err);

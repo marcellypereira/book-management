@@ -27,7 +27,7 @@ const EditBook: React.FC = () => {
         setSelectedBook(bookToEdit);
       } else {
         setToast({ message: "Livro não encontrado.", type: "error" });
-        navigate("/home");
+        navigate("/books");
       }
     }
   }, [books, id, navigate]);
@@ -38,7 +38,7 @@ const EditBook: React.FC = () => {
         onSuccess: () => {
           setToast({ message: "Livro editado com sucesso!", type: "success" });
           setTimeout(() => {
-            navigate("/home", {
+            navigate("/books", {
               state: {
                 toast: {
                   message: "Livro editado com sucesso!",
