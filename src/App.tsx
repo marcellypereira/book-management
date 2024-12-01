@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import SignIn from "./pages/login/signIn";
 import SignUp from "./pages/login/signUp";
 import Home from "./pages/home";
+import AddBook from "./pages/book/addBook";
 
 const queryClient = new QueryClient();
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/addbook" element={<AddBook />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
