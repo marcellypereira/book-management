@@ -1,6 +1,7 @@
 import React from "react";
 import { FiPlus } from "react-icons/fi";
-import Sidebar from "../components/sidebar";
+import BookList from "../components/booksList";
+import Sidebar from "../components/sideBar";
 import Header from "../components/header";
 import Title from "../components/title";
 import { useNavigate } from "react-router-dom";
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
               Novo Livro
             </button>
           </div>
+          <BookList />
         </div>
       </div>
     </div>

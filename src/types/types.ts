@@ -23,3 +23,12 @@ export interface User {
   password: string;
   confirmPassword: string;
 }
+
+export interface Book {
+  id?: string | number;
+  title: string;
+  coverImage: string;
+  publicationDate: number;
+  author: string;
+  summary: string;
+}
