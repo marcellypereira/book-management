@@ -1,11 +1,198 @@
 {
-  "users": [{
-    "id": "8216",
-    "name": "Joao Marques",
-    "position": "user",
-    "createDate": "2025",
-    "email": "joao@gmail.com",
-    "password": "Admin123#",
-    "confirmPassword": "Admin123#"
-  }]
+  "users": [
+    {
+      "id": "8216",
+      "name": "Joao Marques",
+      "position": "user",
+      "createDate": "2025",
+      "email": "joao@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "1540",
+      "name": "Paula Lima",
+      "position": "user",
+      "createDate": "2024",
+      "email": "paula@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "c823",
+      "name": "Maria Prado",
+      "position": "user",
+      "createDate": "2022",
+      "email": "maria@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "1b7e",
+      "name": "Carlos Pereira",
+      "position": "admin",
+      "createDate": "2000",
+      "email": "carlos@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "da36",
+      "name": "Emanuela Chaves",
+      "position": "user",
+      "createDate": "2021",
+      "email": "emanuela@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "2456",
+      "name": "David Moraes",
+      "position": "admin",
+      "createDate": "2023",
+      "email": "david@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "c740",
+      "name": "Murilo Chavier",
+      "position": "user",
+      "createDate": "2020",
+      "email": "murilo@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "960b",
+      "name": "Ana Carla Brito",
+      "position": "admin",
+      "createDate": "2016",
+      "email": "ana@gmail.com",
+      "password": "Admin123#",
+      "confirmPassword": "Admin123#"
+    },
+    {
+      "id": "rtte",
+      "name": "Julia Ramos",
+      "email": "julia@gmail.com",
+      "password": "Admin123#",
+      "position": "user",
+      "createDate": "2024-12-01"
+    }
+  ],
+  "books": [
+    {
+      "id": "352c",
+      "summary": "Bento Santiago, conhecido como Dom Casmurro, narra sua vida em tom melancólico e reflexivo. Ele relembra sua juventude, o romance com Capitu, e o casamento que posteriormente é abalado pelas suspeitas de traição. Bento acredita que Capitu o traiu com seu melhor amigo, Escobar, mas a narrativa, construída de forma subjetiva, não confirma nem nega a infidelidade. A obra explora o ciúme, a memória e a complexidade das relações humanas, sendo considerada uma das maiores obras da literatura brasileira.",
+      "author": "Machado de Assis",
+      "publicationDate": 1899,
+      "coverImage": "https://m.media-amazon.com/images/I/61Z2bMhGicL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Dom Casmurro"
+    },
+    {
+      "id": "b55e",
+      "summary": "O livro apresenta um mundo distópico onde o Partido controla todos os aspectos da vida, liderado pelo enigmático Grande Irmão. Winston Smith, o protagonista, trabalha no Ministério da Verdade, onde reescreve registros históricos para alinhar-se à propaganda do Partido. Ele começa a questionar o regime e se envolve romanticamente com Julia, violando as regras do Estado. Ao ser descoberto, Winston enfrenta uma terrível reeducação. A obra discute o poder absoluto, a manipulação da verdade e a perda da individualidade.",
+      "author": "George Orwell",
+      "publicationDate": 1949,
+      "coverImage": "https://m.media-amazon.com/images/I/61t0bwt1s3L._AC_UF1000,1000_QL80_.jpg",
+      "title": "1984"
+    },
+    {
+      "id": "65d1",
+      "summary": "A culpa é das estrelas” narra o romance de dois adolescentes que se conhecem (e se apaixonam) em um Grupo de Apoio para Crianças com Câncer: Hazel, uma jovem de dezesseis anos que sobrevive graças a uma droga revolucionária que detém a metástase em seus pulmões, e Augustus Waters, de dezessete, ex-jogador de basquete que perdeu a perna para o osteosarcoma. Como Hazel, Gus é inteligente, tem ótimo senso de humor e gosta de brincar com os clichês do mundo do câncer – a principal arma dos dois para enfrentar a doença que lentamente drena a vida das pessoas. Inspirador, corajoso, irreverente e brutal, A culpa é das estrelas é a obra mais ambiciosa e emocionante de John Green, sobre a alegria e a tragédia que é viver e amar.",
+      "author": "John Green",
+      "publicationDate": 2014,
+      "coverImage": "https://i.pinimg.com/736x/21/77/2a/21772a88ebf92797b629af74a34d9d12.jpg",
+      "title": "A culpa é das estrelas"
+    },
+    {
+      "id": "9f0f",
+      "summary": "Após se rebelarem contra o fazendeiro Sr. Jones, os animais da Granja do Solar criam uma sociedade autossuficiente baseada na igualdade. No entanto, os porcos, liderados por Napoleão, gradualmente assumem o poder e transformam a revolução em uma ditadura ainda mais opressiva. A obra é uma alegoria da Revolução Russa e critica regimes totalitários, mostrando como o poder absoluto corrompe.",
+      "author": "George Orwell",
+      "publicationDate": 1945,
+      "coverImage": "https://m.media-amazon.com/images/I/91BsZhxCRjL._AC_UF1000,1000_QL80_.jpg",
+      "title": "A Revolução dos Bichos"
+    },
+    {
+      "id": "0db4",
+      "summary": " Um aviador perdido no deserto encontra um menino vindo de um pequeno planeta. O Pequeno Príncipe narra histórias de seus encontros com personagens excêntricos em outros planetas, refletindo sobre valores como amizade, amor e a essência da vida. A obra mistura simplicidade e profundidade, cativando crianças e adultos.",
+      "author": "Antoine de Saint-Exupéry",
+      "publicationDate": 1943,
+      "coverImage": "https://m.media-amazon.com/images/I/71LJ4k-k9hL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Pequeno Príncipe"
+    },
+    {
+      "id": "fa15",
+      "summary": "A saga da família Buendía em Macondo, uma cidade fictícia, retrata várias gerações marcadas por paixões, tragédias e solidão. A história combina realismo mágico e elementos históricos, explorando temas como destino, amor, guerra e a repetição dos erros humanos.",
+      "author": "Gabriel García Márquez",
+      "publicationDate": 1967,
+      "coverImage": "https://m.media-amazon.com/images/I/81SQPrWU7SL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Cem Anos de Solidão"
+    },
+    {
+      "id": "c8b2",
+      "summary": "Heathcliff, um órfão acolhido pela família Earnshaw, desenvolve um amor intenso e destrutivo por Catherine, sua irmã de criação. Após ser rejeitado, ele busca vingança contra todos que o fizeram sofrer. A obra é uma história de amor, ódio e obsessão, situada nos campos isolados de Yorkshire.",
+      "author": "Emily Brontë",
+      "publicationDate": 1847,
+      "coverImage": "https://m.media-amazon.com/images/I/61hDcknuYqL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Morro dos Ventos Uivantes"
+    },
+    {
+      "id": "2986",
+      "summary": "Harry Potter é um menino órfão de 11 anos que vive com seus tios, os Dursley, e seu primo, Duda. Maltratado e isolado pela família, Harry leva uma vida dura, sem saber nada sobre seus pais ou sobre seu passado. Tudo muda no dia de seu aniversário, quando ele descobre, por meio do gigante Rúbeo Hagrid, que é um bruxo e que seus pais morreram protegendo-o do mais temido bruxo das trevas, Lord Voldemort.\n\nHagrid informa que Harry foi aceito na Escola de Magia e Bruxaria de Hogwarts e revela um segredo extraordinário: Harry sobreviveu a uma maldição mortal lançada por Voldemort quando era bebê, o que o deixou com uma cicatriz em forma de raio na testa e o tornou uma figura lendária no mundo mágico.\n\nAo chegar em Hogwarts, Harry é introduzido a um universo totalmente novo, onde descobre amizades verdadeiras com Rony Weasley e Hermione Granger, outros alunos da escola. Ele também conhece Alvo Dumbledore, o sábio diretor da escola, e Draco Malfoy, um rival. Harry é selecionado para a casa Grifinória e rapidamente se adapta à vida escolar, aprendendo magia, jogando Quadribol como apanhador do time de sua casa, e explorando os mistérios do castelo.",
+      "author": "J.K. Rowling",
+      "publicationDate": 1997,
+      "coverImage": "https://m.media-amazon.com/images/I/81ibfYk4qmL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Harry Potter e a Pedra Filosofal"
+    },
+    {
+      "id": "e3f1",
+      "summary": "A história começa no tranquilo Condado, onde o jovem hobbit Frodo Bolseiro herda de seu tio Bilbo um anel aparentemente comum. No entanto, ele logo descobre que o artefato é, na verdade, o Um Anel, uma poderosa arma forjada pelo Senhor das Trevas, Sauron, que busca reconquistá-lo para dominar toda a Terra-média. Sob a orientação do sábio mago Gandalf, Frodo parte em uma jornada perigosa para destruir o anel, que só pode ser destruído no fogo da Montanha da Perdição, onde foi criado.\n\nFrodo é acompanhado por seus leais amigos hobbits Sam, Merry e Pippin. Durante a viagem, eles enfrentam diversas ameaças, como os terríveis Espectros do Anel, que servem a Sauron. No Conselho de Elrond, em Valfenda, é formada a Sociedade do Anel, composta por Frodo, seus amigos, Gandalf, Aragorn (um herdeiro ao trono perdido), Legolas (um elfo arqueiro), Gimli (um anão) e Boromir (um guerreiro humano).\n\nEnquanto o grupo enfrenta perigos como trolls, orcs e o traidor Saruman, Frodo sente o peso do anel, que começa a corrompê-lo. A Sociedade se fragmenta após a morte de Boromir e o desaparecimento de Gandalf, mas Frodo e Sam continuam a jornada com determinação, enquanto outros membros da Sociedade lutam para proteger os povos livres contra o avanço das forças de Sauron.",
+      "author": "J.R.R. Tolkien",
+      "publicationDate": 1954,
+      "coverImage": "https://harpercollins.com.br/cdn/shop/products/9786555113631_79a81e4f-07c1-4aa8-ba58-b44033442bbf.jpg?v=1686061056",
+      "title": "O Senhor dos Anéis: A Sociedade do Anel"
+    },
+    {
+      "id": "832b",
+      "summary": "A trama é narrada por meio de diários, cartas e recortes de jornal. Jonathan Harker, um jovem advogado, viaja para a Transilvânia para ajudar o misterioso Conde Drácula na compra de propriedades na Inglaterra. Jonathan logo percebe que está preso no castelo do conde, que é um vampiro sedento por sangue.\n\nDrácula viaja para a Inglaterra e começa a espalhar o terror, atacando a jovem Lucy Westenra, que adoece de forma inexplicável. Seu amigo, o médico Dr. Seward, busca a ajuda do professor Abraham Van Helsing, que descobre que Lucy está sob o poder de um vampiro. Após sua morte e transformação em vampira, Lucy é libertada por seus amigos, que destroem sua forma vampírica.\n\nEnquanto isso, Mina, noiva de Jonathan, torna-se o novo alvo de Drácula. Jonathan e seus aliados, incluindo Van Helsing, caçam o vampiro, que retorna para sua terra natal. Em uma perseguição final, eles conseguem derrotar Drácula, libertando Mina de sua influência. O livro explora temas de medo, sexualidade e luta entre o bem e o mal.\n\n",
+      "author": "Bram Stoker",
+      "publicationDate": 1897,
+      "coverImage": "https://m.media-amazon.com/images/I/61MgodE1s0L._AC_UF1000,1000_QL80_.jpg",
+      "title": "Drácula"
+    },
+    {
+      "id": "46c9",
+      "summary": "Holden Caulfield, um adolescente de 16 anos, narra sua história em primeira pessoa, refletindo sobre eventos que o levaram a uma crise emocional. Expulso de mais uma escola, Holden decide explorar Nova York antes de retornar para casa. Durante a viagem, ele enfrenta sentimentos de solidão, alienação e confusão sobre o mundo adulto, que ele vê como falso e hipócrita.\n\nEnquanto tenta encontrar sentido em sua vida, Holden interage com vários personagens, incluindo antigos professores, prostitutas e estranhos. Sua relação mais significativa é com sua irmã caçula, Phoebe, cuja inocência e sinceridade contrastam com o cinismo de Holden. O livro aborda temas como adolescência, saúde mental e a busca por autenticidade em um mundo superficial.\n\n",
+      "author": "J.D. Salinger",
+      "publicationDate": 1951,
+      "coverImage": "https://m.media-amazon.com/images/I/71b3GDZMzSL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Apanhador no Campo de Centeio"
+    },
+    {
+      "id": "c6fd",
+      "summary": "Victor Frankenstein, um jovem cientista ambicioso, cria um ser humano a partir de partes de cadáveres, mas fica horrorizado com sua própria criação. O \"monstro\", rejeitado por seu criador e pela sociedade, tenta encontrar um lugar no mundo, mas enfrenta hostilidade devido à sua aparência.\nEventualmente, o monstro busca vingança contra Victor, destruindo tudo o que ele ama. A narrativa é contada por meio de cartas de um explorador chamado Walton, que encontra Victor no Ártico perseguindo sua criação. O romance explora temas como os limites da ciência, responsabilidade ética e os perigos da solidão.\n",
+      "author": "Mary Shelley",
+      "publicationDate": 1818,
+      "coverImage": "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788537816547/frankenstein-edicao-comentada.jpg",
+      "title": "Frankenstein"
+    },
+    {
+      "id": "06b4",
+      "summary": "Pip, um órfão criado por sua irmã e seu cunhado, sonha em melhorar sua vida e tornar-se um cavalheiro. Após um encontro marcante com um prisioneiro fugitivo, Magwitch, e com a reclusa e amargurada Srta. Havisham, Pip recebe inesperadamente uma fortuna de um benfeitor anônimo.\n\nEle se muda para Londres, onde busca conquistar Estella, a bela e fria protegida da Srta. Havisham. No entanto, Pip descobre que seu benfeitor é Magwitch, não a Srta. Havisham, e enfrenta uma crise moral ao lidar com suas ambições e seus valores. O livro explora temas como classe social, amor e redenção.\n\n",
+      "author": "Charles Dickens",
+      "publicationDate": 1861,
+      "coverImage": "https://m.media-amazon.com/images/I/71LdmGeFZDL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Grandes Esperanças"
+    },
+    {
+      "id": "d6cb",
+      "summary": "Gregor Samsa, um jovem vendedor, acorda transformado em um gigantesco inseto. Incapaz de trabalhar, ele se torna um fardo para sua família, que reage com horror e rejeição. Isolado em seu quarto, Gregor reflete sobre sua vida e seus sacrifícios pela família, enquanto sua condição deteriora suas relações e sua saúde.\n\nA história é uma alegoria sobre alienação, desumanização e a condição humana, sendo uma das obras mais importantes da literatura modernista.",
+      "author": "Franz Kafka",
+      "publicationDate": 1915,
+      "coverImage": "https://m.media-amazon.com/images/I/71mFnG3Bn3L._AC_UF1000,1000_QL80_.jpg",
+      "title": "A Metamorfose"
+    }
+  ]
 }
