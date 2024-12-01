@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import Toast from "../../components/toast";
 
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 const schema = yup.object().shape({
   name: yup
     .string()
@@ -66,7 +68,7 @@ const SignUp: React.FC = () => {
     };
 
     try {
-      const usersResponse = await fetch("http://localhost:3001/users");
+      const usersResponse = await fetch(`${BASE_URL}/users`);
       const users = await usersResponse.json();
 
       const userExists = users.some(
@@ -82,7 +84,7 @@ const SignUp: React.FC = () => {
           showToastMessage("Login bem-sucedido!", "success");
         }
       } else {
-        const response = await fetch("http://localhost:3001/users", {
+        const response = await fetch(`${BASE_URL}/users`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
