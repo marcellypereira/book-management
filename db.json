@@ -1,90 +1,74 @@
 {
   "users": [
     {
-      "id": "1540",
-      "name": "Paula Lima",
-      "position": "Usuário",
-      "createDate": "2024",
-      "email": "paula@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "c823",
-      "name": "Maria Prado",
-      "position": "Usuário",
-      "createDate": "2022",
-      "email": "maria@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "1b7e",
-      "name": "Carlos Pereira",
+      "id": "a808",
+      "name": "Helena Pereira",
       "position": "Administrador",
-      "createDate": "2000",
-      "email": "carlos@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "da36",
-      "name": "Emanuela Chaves",
-      "position": "Usuário",
-      "createDate": "2021",
-      "email": "emanuela@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "2456",
-      "name": "David Moraes",
-      "position": "Administrador",
-      "createDate": "2023",
-      "email": "david@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "c740",
-      "name": "Murilo Chavier",
-      "position": "Usuário",
-      "createDate": "2020",
-      "email": "murilo@gmail.com",
-      "password": "Admin123#",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "rtte",
-      "name": "Julia Ramos",
-      "email": "julia@gmail.com",
-      "password": "Admin123#",
-      "position": "Usuário",
-      "createDate": "2024-12-01",
-      "confirmPassword": "Admin123#"
-    },
-    {
-      "id": "vo1t",
-      "name": "Billyfranklim Avelino Pereira",
-      "email": "billyfranklim@gmail.com",
+      "email": "helena@gmail.com",
       "password": "12345678",
-      "position": "Administrador",
-      "createDate": "2024-12-01",
       "confirmPassword": "12345678"
     },
     {
-      "id": "650b",
-      "name": "Marcelly Avelino",
-      "position": "Administrador",
+      "id": "575f",
+      "name": "João Oliveira",
+      "position": "Usuário",
+      "email": "joao@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "db53",
+      "name": "Fernanda Rocha",
+      "position": "Usuário",
+      "email": "fermanda@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "5b07",
+      "name": "Marcelly Pereira",
+      "position": "Usuário",
       "email": "marcelly@gmail.com",
       "password": "12345678",
       "confirmPassword": "12345678"
     },
     {
-      "id": "82ba",
-      "name": "Giselly Pereira",
+      "id": "c11b",
+      "name": "Guilherme Sousa",
       "position": "Usuário",
-      "email": "giselly@gmail.com",
+      "email": "guilherme@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "2dff",
+      "name": "Vanessa Aguiar",
+      "position": "Usuário",
+      "email": "vanessa@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "6699",
+      "name": "Alana Silva",
+      "position": "Usuário",
+      "email": "alana@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "91b9",
+      "name": "Josué Costa",
+      "position": "Administrador",
+      "email": "josue@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678"
+    },
+    {
+      "id": "52a7",
+      "name": "Elise Silva",
+      "position": "Administrador",
+      "email": "elise@gmail.com",
       "password": "12345678",
       "confirmPassword": "12345678"
     }
@@ -195,12 +179,12 @@
       "title": "Grandes Esperanças"
     },
     {
-      "id": "d6cb",
       "summary": "Gregor Samsa, um jovem vendedor, acorda transformado em um gigantesco inseto. Incapaz de trabalhar, ele se torna um fardo para sua família, que reage com horror e rejeição. Isolado em seu quarto, Gregor reflete sobre sua vida e seus sacrifícios pela família, enquanto sua condição deteriora suas relações e sua saúde.\n\nA história é uma alegoria sobre alienação, desumanização e a condição humana, sendo uma das obras mais importantes da literatura modernista.",
       "author": "Franz Kafka",
       "publicationDate": 1915,
       "coverImage": "https://m.media-amazon.com/images/I/71mFnG3Bn3L._AC_UF1000,1000_QL80_.jpg",
-      "title": "A Metamorfose"
+      "title": "A Metamorfose",
+      "id": "d6cb"
     }
   ]
 }
