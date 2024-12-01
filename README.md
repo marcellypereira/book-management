@@ -9,6 +9,9 @@ O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www
 - [React](https://legacy.reactjs.org/docs/create-a-new-react-app.html)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/docs/width)
+- [React Query](https://www.npmjs.com/package/react-query)
+- [Json Server](https://www.npmjs.com/package/json-server)
+
 
 ## :sparkles: Funcionalidades
 
