@@ -36,6 +36,13 @@ O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www
 5. Em um terminal, execute o comando json-server `--watch db.json --port 3001 para rodar a simulação da API`.
 6. Em outro terminal, execute o comando `yarn start` para iniciar o servidor de desenvolvimento e a aplicação.
 
+## :white_check_mark: Usuário Administrador Criado
+
+Email: admin@gmail.com
+
+Senha: Admin123#
+
+
 ## :tada: Visualização Administradores
 
 ![admin](https://github.com/user-attachments/assets/d0d9dcdb-77b2-4187-8971-9d76804660eb)
