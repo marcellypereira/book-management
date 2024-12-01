@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# AutoVist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :book: Sobre o projeto
 
-## Available Scripts
+O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www.figma.com/design/qpgEpcPm2SJPvSSJbJKZOf/Books-Management?node-id=0-1&node-type=canvas&t=saAso9SDBRs4Vz2h-0).
 
-In the project directory, you can run:
+## :computer: Tecnologias
 
-### `npm start`
+- [React](https://legacy.reactjs.org/docs/create-a-new-react-app.html)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/docs/width)
+- [React Query](https://www.npmjs.com/package/react-query)
+- [Json Server](https://www.npmjs.com/package/json-server)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :sparkles: Funcionalidades
 
-### `npm test`
+- Controle de Acesso Baseado em Usuários: Implementação de controle de acesso com usuários comuns e administradores, onde o primeiro usuário registrado é um administrador com permissões para criar e remover outros administradores.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Autenticação com LocalStorage: Sistema de autenticação utilizando localStorage para manter o estado de login, permitindo uma navegação contínua sem reautenticação, melhorando a experiência do usuário.
 
-### `npm run build`
+- CRUD de Livros para Administradores: Desenvolvimento de funcionalidades de CRUD (Criar, Editar, Deletar) para livros, com restrições para usuários comuns que apenas visualizam os livros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- CRUD de Usuários para Administradores: Funcionalidade de CRUD (Criar, Editar, Remover) para gerenciar usuários, acessível apenas aos administradores.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Listagem de Livros e Usuários: Implementação de filtros e ordenação na lista de livros, proporcionando uma navegação mais eficiente para administradores.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Simulação com Banco de Dados (db.json): Uso do db.json com JSON Server para simular uma API RESTful, facilitando o desenvolvimento e a integração da aplicação com dados simulados.
 
-### `npm run eject`
+## :rocket: Como Rodar o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone o repositório para sua máquina local.
+2. Navegue até a pasta do projeto utilizando o terminal.
+3. Verifique se está utilizando a última versão do Node.js.
+4. Execute o comando npm install para instalar as dependências necessárias.
+5. Em um terminal, execute o comando json-server `--watch db.json --port 3001 para rodar a simulação da API`.
+6. Em outro terminal, execute o comando `yarn start` para iniciar o servidor de desenvolvimento e a aplicação.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :white_check_mark: Usuário Administrador Criado
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Email: admin@gmail.com
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Senha: Admin123#
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :tada: Visualização Administradores
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![admin](https://github.com/user-attachments/assets/d0d9dcdb-77b2-4187-8971-9d76804660eb)
+
+## :tada: Visualização Usuários Comuns
+
+![user](https://github.com/user-attachments/assets/f1ecddb9-9fee-4bbd-97e0-3946d9526717)
+
+<div align="center">Feito com 💜!</div>
