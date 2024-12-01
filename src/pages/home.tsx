@@ -1,6 +1,5 @@
 import React from "react";
 import { FiPlus } from "react-icons/fi";
-import BookList from "../components/booksList";
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
 import Title from "../components/title";
@@ -25,7 +24,6 @@ const Home: React.FC = () => {
               Novo Livro
             </button>
           </div>
-          <BookList />
         </div>
       </div>
     </div>
