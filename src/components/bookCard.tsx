@@ -1,112 +1,98 @@
-import React, { useState } from "react";
-import { FiEdit2, FiTrash } from "react-icons/fi";
-import { useBooks } from "../hooks/useBooks";
-import { useNavigate } from "react-router-dom";
-import DeleteModal from "../pages/book/deleteBook";
-import PaginatedList from "../components/paginatedList";
+import React, { useState, useEffect } from "react";
+import { FiX } from "react-icons/fi";
 
-const BookList: React.FC = () => {
-  const { books, deleteBook } = useBooks();
-  const navigate = useNavigate();
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedBookId, setSelectedBookId] = useState<string | null>(null);
+interface BookCardProps {
+  title: string;
+  author: string;
+  imageUrl: string;
+  summary: string;
+  publicationDate: number;
+}
 
-  const openModal = (bookId: string) => {
-    setSelectedBookId(bookId);
-    setModalOpen(true);
-  };
+const BookCard: React.FC<BookCardProps> = ({
+  title,
+  author,
+  imageUrl,
+  summary,
+  publicationDate,
+}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const closeModal = () => {
-    setSelectedBookId(null);
-    setModalOpen(false);
-  };
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
-  const handleDelete = () => {
-    if (selectedBookId !== null) {
-      deleteBook.mutate(selectedBookId, {
-        onSuccess: () => {
-          console.log(`Livro com ID ${selectedBookId} foi excluído.`);
-          closeModal();
-        },
-        onError: () => {
-          console.error("Erro ao excluir o livro.");
-        },
-      });
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
-  };
-
-  if (books.isLoading) {
-    return <p>Carregando...</p>;
-  }
-
-  if (books.isError) {
-    return <p>Erro ao carregar os livros.</p>;
-  }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
 
   return (
-    <div className="grid gap-4">
-      <div className="border-t border-gray-300 mb-2 mt-5"></div>
-  
-      <div className="hidden sm:grid grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 text-gray-400 text-sm">
-        <span className="font-medium text-center">Capa</span>
-        <span className="font-medium text-center">Nome</span>
-        <span className="font-medium text-center">Autor</span>
-        <span className="font-medium text-center">Data</span>
-        <span className="font-medium text-center">Ações</span>
-      </div>
-  
-      <PaginatedList
-        items={books.data || []}
-        itemsPerPage={5}
-        renderItem={(book) => (
-          <div
-            key={book.id}
-            className="grid sm:grid-cols-[6rem,2.5fr,1fr,1fr,6rem] gap-x-8 gap-y-4 items-center px-4 py-2 bg-white rounded-md shadow-md sm:text-start lg:text-center md:text-center"
+    <div className="w-80 bg-white rounded-lg shadow-lg overflow-hidden">
+      <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
+      <div className="p-4 text-center">
+        <h3 className="text-lg font-semibold text-black">{title}</h3>
+        <p className="text-sm text-gray-500">{author}</p>
+        <div className="flex justify-center mt-4">
+          <button
+            className="px-4 py-2 bg-[#6347F9] text-white text-sm rounded-md hover:bg-[#5238e5]"
+            onClick={handleOpenModal}
           >
-            <div className="w-full h-24 sm:h-28 mx-auto sm:mx-0">
-              <img
-                src={book.coverImage}
-                alt={book.title}
-                className="w-full h-full object-cover rounded-md"
-              />
-            </div>
-  
-            <h2 className="text-md font-semibold text-gray-900 truncate">
-              {book.title}
-            </h2>
-  
-            <p className="text-sm text-gray-500 truncate">{book.author}</p>
-  
-            <p className="text-sm text-gray-500 truncate">{book.publicationDate}</p>
-  
-            <div className="flex lg:justify-center md:justify-center justify-end space-x-4">
-              <button
-                className="text-[#6347F9] hover:text-[#5037d1] transition-all"
-                onClick={() => navigate(`/edit-book/${book.id}`)}
-              >
-                <FiEdit2 size={20} />
-              </button>
-              <button
-                className="text-[#6347F9] hover:text-[#5037d1] transition-all"
-                onClick={() => book.id && openModal(String(book.id))}
-              >
-                <FiTrash size={20} />
-              </button>
+            Ver mais
+          </button>
+        </div>
+      </div>
+
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-4xl relative max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 text-white bg-[#6347F9] rounded-full p-2 hover:bg-[#5238e5] transition"
+            >
+              <FiX size={24} />
+            </button>
+
+            <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex-1 flex justify-center">
+                <img
+                  src={imageUrl}
+                  alt={title}
+                  className="w-full max-w-md h-full object-cover rounded-md shadow-lg"
+                />
+              </div>
+
+              <div className="flex-1 flex flex-col mt-10">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  {title}
+                </h2>
+                <p className="text-lg text-gray-700 mb-2">
+                  <strong>Autor:</strong> {author}
+                </p>
+                <p className="text-lg text-gray-700 mb-2">
+                  <strong>Ano de Publicação:</strong> {publicationDate}
+                </p>
+                <p className="text-gray-700 text-justify text-md mb-4">
+                  <strong>Resumo:</strong> {summary}
+                </p>
+              </div>
             </div>
           </div>
-        )}
-      />
-  
-      <DeleteModal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        onConfirm={handleDelete}
-      />
+        </div>
+      )}
     </div>
   );
-  
-  
-  
 };
 
-export default BookList;
+export default BookCard;

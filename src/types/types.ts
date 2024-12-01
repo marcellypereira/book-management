@@ -14,6 +14,14 @@ export interface ToastProps {
   type: "success" | "error";
   onClose: () => void;
 }
+export interface Book {
+  id?: string | number;
+  title: string;
+  coverImage: string;
+  publicationDate: number;
+  author: string;
+  summary: string;
+}
 export interface User {
   id?: string | number;
   name: string;
@@ -22,13 +30,4 @@ export interface User {
   position: string;
   password: string;
   confirmPassword: string;
-}
-
-export interface Book {
-  id?: string | number;
-  title: string;
-  coverImage: string;
-  publicationDate: number;
-  author: string;
-  summary: string;
 }
