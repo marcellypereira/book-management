@@ -13,44 +13,81 @@ O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www
 - [Json Server](https://www.npmjs.com/package/json-server)
 
 
-## :sparkles: Funcionalidades
+### 🎯 Objetivo do Projeto
 
-- **Controle de Acesso Baseado em Usuários:**
-  - O sistema implementa um controle de acesso baseado em dois tipos de usuários: **usuários comuns** e **administradores**.
-  - Um **usuário administrador** já está registrado por padrão no sistema, com e-mail e senha definidos. Apenas **administradores** podem criar outros administradores ou remover administradores existentes.
-  - **Usuários comuns** são criados por meio do formulário de cadastro. Todo usuário criado através desse formulário será automaticamente registrado como **usuário comum**, com permissões restritas. Usuários comuns têm acesso apenas para visualizar os livros, sem poder editar ou remover nenhum item.
-  - **Usuários administradores** possuem a capacidade de gerenciar o nível de acesso dos outros usuários, podendo alterá-los para **administradores** ou **usuários comuns**. Ou seja, apenas administradores têm a permissão para criar novos administradores ou alterar os privilégios dos usuários já existentes.
+O objetivo deste projeto é criar uma **aplicação web** para o gerenciamento de livros com:
 
-- **CRUD de Livros para Administradores:**
-  - Os administradores têm acesso completo ao **CRUD (Criar, Editar, Deletar)** de livros.
-  - Eles podem adicionar novos livros ao sistema, editar as informações dos livros existentes e removê-los conforme necessário.
-  - **Usuários comuns** têm acesso apenas para visualizar os livros, sem permissões para editá-los ou excluí-los.
+- **Diferentes níveis de acesso**: Usuários comuns e administradores.
+- **Sistema de gerenciamento de usuários**: Administradores podem criar, editar e excluir usuários, enquanto usuários comuns só podem visualizar livros.
+- **Simulação de banco de dados**: Usando **Json Server** para simular o armazenamento de dados.
 
-- **CRUD de Usuários para Administradores:**
-  - Os administradores podem gerenciar usuários através de um **CRUD (Criar, Editar, Remover)**. 
-  - Eles podem criar novos usuários, editar os dados dos usuários existentes e excluir usuários.
-  - **Administração de permissões de acesso**: Além disso, somente administradores podem definir o tipo de usuário (comum ou administrador) durante o processo de criação ou edição de um usuário.
+---
 
-- **Simulação com Banco de Dados (db.json):**
-  - O projeto utiliza o **db.json** com **JSON Server** para simular uma API RESTful. Isso permite que o sistema seja testado e utilizado de forma interativa sem a necessidade de um back-end real.
-  - O JSON Server serve como um banco de dados temporário, armazenando as informações dos usuários e livros enquanto a aplicação está sendo executada.
+### 🔑 Funcionalidades
 
+#### 🔐 Acesso para Administradores:
+- **Criar, editar e excluir livros**.
+- **Gerenciar usuários**: Administradores podem criar, editar e excluir outros usuários (não podem excluir a si próprios).
+- **Criar outros administradores**.
 
-## :rocket: Como Rodar o Projeto
+#### 👀 Acesso para Usuários Comuns:
+- **Visualização de livros**: Usuários comuns podem apenas visualizar livros e suas informações.
 
-1. Clone o repositório para sua máquina local.
-2. Navegue até a pasta do projeto utilizando o terminal.
-3. Verifique se está utilizando a última versão do Node.js.
-4. Execute o comando `npm install` para instalar as dependências necessárias.
-5. Em um terminal, execute o comando json-server `json-server --watch db.json --port 3001` para rodar a simulação da API.
-6. Em outro terminal, execute o comando `yarn start` para iniciar o servidor de desenvolvimento e a aplicação.
+#### 🌟 Funcionalidades Adicionais:
+- **Proteção de rotas**: Verifique se o usuário tem permissão antes de acessar páginas específicas.
+- **Logout**: Ao fazer logout, as informações do usuário são removidas do **Local Storage**.
+- **Paginação**: Paginação na listagem de livros e usuários para melhorar a navegação.
+- **Validações de formulário**: Utilizando **Yup** para garantir que os dados sejam validados antes de enviar os formulários.
+- **Layout responsivo e atrativo**, criado no **Figma** 🎨.
 
-## :key: Usuário Administrador Padrão
+---
 
-Email: admin@gmail.com
+### 👤 Usuário Padrão
 
-Senha: Admin123#
+Após a criação de um novo usuário pelo signUp, ele será **usuário comum** por padrão. Apenas **administradores** podem criar outros administradores.
 
+#### Dados do Usuário Padrão Administrador:
+- **E-mail**: `admin@gmail.com` 📧
+- **Senha**: `Admin123#` 🔑
+
+---
+
+### 🚀 Como Rodar o Projeto
+
+1. **Clone o repositório**:
+
+```bash
+git clone https://link-do-repositorio.git
+cd nome-do-projeto
+```
+
+2. **Crie um arquivo .env na raiz do projeto e adicione**:
+
+```bash
+REACT_APP_API_URL=http://localhost:3001
+```
+
+3. **Instale as dependências**:
+
+```bash
+npm install
+```
+
+4. **Instale o Json Server globalmente (caso não tenha)**:
+
+```bash
+npm install -g json-server
+```
+5. **Inicie o Json Server em um terminal separado**:
+
+```bash
+json-server --watch db.json --port 3001
+```
+6. **Inicie a aplicação**:
+
+```bash
+npm start
+```
 
 ## :tada: Visualização Administradores
 
