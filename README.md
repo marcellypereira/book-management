@@ -91,7 +91,7 @@ npm start
 
 ## :tada: Visualização Administradores
 
-![admin](https://github.com/user-attachments/assets/d0d9dcdb-77b2-4187-8971-9d76804660eb)
+![admin](https://github.com/user-attachments/assets/eb670493-699d-4808-9ed2-b25e0ca48096)
 
 ## :tada: Visualização Usuários Comuns
 
