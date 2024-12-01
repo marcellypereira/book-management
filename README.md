@@ -17,8 +17,6 @@ O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www
 
 - Controle de Acesso Baseado em Usuários: Implementação de controle de acesso com usuários comuns e administradores, onde o primeiro usuário registrado é um administrador com permissões para criar e remover outros administradores.
 
-- Autenticação com LocalStorage: Sistema de autenticação utilizando localStorage para manter o estado de login, permitindo uma navegação contínua sem reautenticação, melhorando a experiência do usuário.
-
 - CRUD de Livros para Administradores: Desenvolvimento de funcionalidades de CRUD (Criar, Editar, Deletar) para livros, com restrições para usuários comuns que apenas visualizam os livros.
 
 - CRUD de Usuários para Administradores: Funcionalidade de CRUD (Criar, Editar, Remover) para gerenciar usuários, acessível apenas aos administradores.
