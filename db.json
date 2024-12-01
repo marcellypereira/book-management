@@ -1,0 +1,11 @@
+{
+  "users": [{
+    "id": "8216",
+    "name": "Joao Marques",
+    "position": "user",
+    "createDate": "2025",
+    "email": "joao@gmail.com",
+    "password": "Admin123#",
+    "confirmPassword": "Admin123#"
+  }]
+}
