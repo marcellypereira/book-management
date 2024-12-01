@@ -57,8 +57,8 @@ Após a criação de um novo usuário pelo signUp, ele será **usuário comum** 
 1. **Clone o repositório**:
 
 ```bash
-git clone https://link-do-repositorio.git
-cd nome-do-projeto
+git clone git@github.com:marcellypereira/book-management.git
+cd book-management
 ```
 
 2. **Crie um arquivo .env na raiz do projeto e adicione**:
