@@ -30,7 +30,7 @@ O design foi criado por mim no Figma, e você pode conferi-lo [aqui](https://www
 1. Clone o repositório para sua máquina local.
 2. Navegue até a pasta do projeto utilizando o terminal.
 3. Verifique se está utilizando a última versão do Node.js.
-4. Execute o comando npm install para instalar as dependências necessárias.
+4. Execute o comando `npm install` para instalar as dependências necessárias.
 5. Em um terminal, execute o comando json-server `--watch db.json --port 3001 para rodar a simulação da API`.
 6. Em outro terminal, execute o comando `yarn start` para iniciar o servidor de desenvolvimento e a aplicação.
 
