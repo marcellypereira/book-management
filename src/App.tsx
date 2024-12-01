@@ -9,6 +9,7 @@ import User from "./pages/user/userList";
 import EditBook from "./pages/book/editBook";
 import AddUser from "./pages/user/addUser"
 import EditUser from "./pages/user/editUser";
+import ListForUsers from "./pages/listForUsers";
 
 const queryClient = new QueryClient(); 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path="/addUser" element={<AddUser />} />
           <Route path="/edit-book/:id" element={<EditBook />} />
           <Route path="/edit-user/:id" element={<EditUser />} />
+          <Route path="listforusers" element={<ListForUsers />} />
           </Routes>
       </BrowserRouter>
     </QueryClientProvider>
