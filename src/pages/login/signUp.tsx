@@ -68,7 +68,6 @@ const SignUp: React.FC = () => {
     };
   
     try {
-      // Verifique se o e-mail já está cadastrado
       const usersResponse = await fetch(`${BASE_URL}/users`);
       const users = await usersResponse.json();
   
@@ -79,7 +78,6 @@ const SignUp: React.FC = () => {
       if (userExists) {
         showToastMessage("Este e-mail já está cadastrado.", "error");
       } else {
-        // Caso o e-mail não exista, cria o novo usuário
         const response = await fetch(`${BASE_URL}/users`, {
           method: "POST",
           headers: {
