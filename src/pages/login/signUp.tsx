@@ -66,24 +66,20 @@ const SignUp: React.FC = () => {
       position: "user",
       createDate: new Date().toISOString().split("T")[0],
     };
-
+  
     try {
+      // Verifique se o e-mail já está cadastrado
       const usersResponse = await fetch(`${BASE_URL}/users`);
       const users = await usersResponse.json();
-
+  
       const userExists = users.some(
         (user: { email: string }) => user.email === data.email
       );
-
+  
       if (userExists) {
-        const user = users.find(
-          (user: { email: string }) => user.email === data.email
-        );
-        if (user) {
-          localStorage.setItem("user", JSON.stringify(user));
-          showToastMessage("Login bem-sucedido!", "success");
-        }
+        showToastMessage("Este e-mail já está cadastrado.", "error");
       } else {
+        // Caso o e-mail não exista, cria o novo usuário
         const response = await fetch(`${BASE_URL}/users`, {
           method: "POST",
           headers: {
@@ -91,7 +87,7 @@ const SignUp: React.FC = () => {
           },
           body: JSON.stringify(newUser),
         });
-
+  
         if (response.ok) {
           localStorage.setItem("user", JSON.stringify(newUser));
           showToastMessage("Cadastro realizado com sucesso!", "success");
@@ -101,9 +97,10 @@ const SignUp: React.FC = () => {
       }
     } catch (error) {
       console.error("Erro:", error);
-      showToastMessage("Erro ao tentar cadastrar/login usuário.", "error");
+      showToastMessage("Erro ao tentar cadastrar usuário.", "error");
     }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#E8EAF6]">

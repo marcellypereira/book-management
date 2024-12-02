@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { User } from "../types/types";
 import { useNavigate } from "react-router-dom";
+import { useUsers } from "../hooks/useUser";
+import Toast from "../components/toast";
 
 interface UserFormProps {
   initialData?: User;
@@ -26,6 +28,7 @@ const schema = yup.object().shape({
 
 const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
   const navigate = useNavigate();
+  const { users } = useUsers();
   const {
     register,
     handleSubmit,
@@ -36,13 +39,21 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
     resolver: yupResolver(schema),
   });
 
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+
   const submitHandler = (data: User) => {
+    const existingUser = users.data?.find((user) => user.email === data.email);
+    
+    if (existingUser) {
+      setToast({ message: "O e-mail informado já está cadastrado.", type: "error" });
+      return;
+    }
+
     console.log("Dados do formulário enviados:", data);
     onSubmit(data);
     reset();
     console.log("Formulário redefinido após o envio");
   };
-
   return (
     <form onSubmit={handleSubmit(submitHandler)} className="space-y-4">
       <div>
@@ -147,7 +158,9 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
           Criar
         </button>
       </div>
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </form>
+    
   );
 };
 

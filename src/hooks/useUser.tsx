@@ -15,6 +15,11 @@ export const useUsers = () => {
   };
 
   const addUser = async (user: User): Promise<void> => {
+    const existingUsers = await fetchUsers();
+    const emailExists = existingUsers.some((u) => u.email === user.email);
+    if (emailExists) {
+      throw new Error("O e-mail informado já está cadastrado.");
+    }
     const response = await fetch(`${BASE_URL}/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
