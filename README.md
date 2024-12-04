@@ -97,4 +97,4 @@ npm start
 
 ![user](https://github.com/user-attachments/assets/f1ecddb9-9fee-4bbd-97e0-3946d9526717)
 
-<div align="center">Feito com 💜!</div>
+<div align="center">Feito com 💜! </div>
