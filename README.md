@@ -89,11 +89,11 @@ json-server --watch db.json --port 3001
 npm start
 ```
 
-## :tada: Visualização Administradores
+## :sparkles: Visualização Administradores
 
 ![admin](https://github.com/user-attachments/assets/198aba44-19ea-4944-9557-e92d88a32448)
 
-## :tada: Visualização Usuários Comuns
+## :sparkles: Visualização Usuários Comuns
 
 ![user](https://github.com/user-attachments/assets/3b54681c-7fa7-4257-90f0-39a815597b8e)
 
