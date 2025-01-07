@@ -22,7 +22,7 @@ const SignIn = () => {
         setToastType("success");
         setToastMessage("Login bem-sucedido!");
         setShowToast(true);
-  
+
         setTimeout(() => {
           if (user.position === "Administrador") {
             navigate("/books");
@@ -52,7 +52,7 @@ const SignIn = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#E8EAF6]">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] max-w-6xl h-[750px] bg-white rounded-lg shadow-lg p-6 relative">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] max-w-6xl h-[650px] bg-white rounded-lg shadow-lg p-6 relative">
         <div className="flex flex-col justify-center items-center p-8 z-10">
           <h2 className="text-3xl font-semibold text-center text-gray-700 mb-6">
             Entre na sua conta
@@ -75,7 +75,7 @@ const SignIn = () => {
                 className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-[#6347F9]"
               />
               {errors.email && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.email}
                 </p>
               )}
@@ -104,7 +104,7 @@ const SignIn = () => {
                 )}
               </div>
               {errors.password && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.password}
                 </p>
               )}
@@ -133,7 +133,7 @@ const SignIn = () => {
           <img
             src="https://images.pexels.com/photos/2067569/pexels-photo-2067569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Ilustração de Login"
-            className="object-cover w-[350px] h-[653px] rounded-lg transition-all duration-300 group-hover:brightness-75"
+            className="object-cover w-[350px] h-[600px] rounded-lg transition-all duration-300 group-hover:brightness-75"
             style={{
               borderTopRightRadius: "50px",
               borderBottomLeftRadius: "25px",
