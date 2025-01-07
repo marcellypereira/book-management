@@ -66,15 +66,15 @@ const SignUp: React.FC = () => {
       position: "user",
       createDate: new Date().toISOString().split("T")[0],
     };
-  
+
     try {
       const usersResponse = await fetch(`${BASE_URL}/users`);
       const users = await usersResponse.json();
-  
+
       const userExists = users.some(
         (user: { email: string }) => user.email === data.email
       );
-  
+
       if (userExists) {
         showToastMessage("Este e-mail já está cadastrado.", "error");
       } else {
@@ -85,7 +85,7 @@ const SignUp: React.FC = () => {
           },
           body: JSON.stringify(newUser),
         });
-  
+
         if (response.ok) {
           localStorage.setItem("user", JSON.stringify(newUser));
           showToastMessage("Cadastro realizado com sucesso!", "success");
@@ -98,12 +98,11 @@ const SignUp: React.FC = () => {
       showToastMessage("Erro ao tentar cadastrar usuário.", "error");
     }
   };
-  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#E8EAF6]">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] max-w-6xl h-[750px] bg-white rounded-lg shadow-lg p-6 relative">
-        <div className="flex flex-col justify-center items-center p-8 z-10">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] max-w-6xl h-[650px] bg-white rounded-lg shadow-lg p-6 relative">
+        <div className="flex flex-col justify-center items-center z-10">
           <h2 className="text-3xl font-semibold text-center text-gray-700 mb-6">
             Crie sua conta
           </h2>
@@ -113,7 +112,7 @@ const SignUp: React.FC = () => {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 w-full max-w-sm"
+            className=" w-full max-w-sm"
           >
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
@@ -126,7 +125,7 @@ const SignUp: React.FC = () => {
                 {...control.register("name")}
               />
               {errors.name && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.name.message}
                 </p>
               )}
@@ -143,7 +142,7 @@ const SignUp: React.FC = () => {
                 {...control.register("email")}
               />
               {errors.email && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.email.message}
                 </p>
               )}
@@ -172,7 +171,7 @@ const SignUp: React.FC = () => {
                 </div>
               </div>
               {errors.password && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.password.message}
                 </p>
               )}
@@ -203,13 +202,13 @@ const SignUp: React.FC = () => {
                 </div>
               </div>
               {errors.confirmPassword && (
-                <p className="text-[#dc143c] text-xs mt-2 font-bold">
+                <p className="text-[#dc143c] text-xs font-bold">
                   {errors.confirmPassword.message}
                 </p>
               )}
             </div>
 
-            <div className="mb-4 flex w-full items-start gap-1.5">
+            <div className="mb-[0.7rem] flex w-full items-start gap-1.5">
               <input
                 type="checkbox"
                 id="terms-checkbox"
@@ -222,7 +221,7 @@ const SignUp: React.FC = () => {
               </label>
             </div>
             {errors.terms && (
-              <p className="text-[#dc143c] text-xs mt-2 font-bold">
+              <p className="text-[#dc143c] text-xs font-bold">
                 {errors.terms.message}
               </p>
             )}
@@ -234,7 +233,7 @@ const SignUp: React.FC = () => {
             </button>
           </form>
 
-          <div className="text-center mt-4">
+          <div className="text-center mt-2">
             <span className="text-sm text-gray-600">
               Já tem uma conta?{" "}
               <button
@@ -251,7 +250,7 @@ const SignUp: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/2067569/pexels-photo-2067569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Ilustração de Cadastro"
-            className="object-cover w-[350px] h-[653px] rounded-lg transition-all duration-300 group-hover:brightness-75"
+            className="object-cover w-[350px] h-[600px] rounded-lg transition-all duration-300 group-hover:brightness-75"
             style={{
               borderTopRightRadius: "50px",
               borderBottomLeftRadius: "25px",
