@@ -52,7 +52,7 @@ const SignIn = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#E8EAF6]">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] bg-white rounded-lg shadow-lg px-6 py-[1rem] m-6 relative">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] bg-white rounded-lg shadow-lg px-6 py-[2rem] m-6 relative">
         <div className="flex flex-col justify-center items-center z-10">
           <h2 className="text-3xl font-semibold text-center text-gray-700 mb-6">
             Entre na sua conta
